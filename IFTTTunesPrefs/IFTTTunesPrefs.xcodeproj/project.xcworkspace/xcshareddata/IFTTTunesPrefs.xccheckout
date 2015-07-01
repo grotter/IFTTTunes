@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7939292E-7736-4692-BDE5-102DD29C4893</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>IFTTTunesPrefs</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7137A512A3499AF46F6B3DE6EE40B16A6F2E1B6F</key>
 		<string>https://github.com/grotter/IFTTTunes.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IFTTTunesPrefs/IFTTTunesPrefs.xcodeproj/project.xcworkspace</string>
+	<string>IFTTTunesPrefs/IFTTTunesPrefs.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7137A512A3499AF46F6B3DE6EE40B16A6F2E1B6F</key>

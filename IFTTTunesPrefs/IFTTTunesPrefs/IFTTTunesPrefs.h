@@ -8,8 +8,14 @@
 
 #import <PreferencePanes/PreferencePanes.h>
 
-@interface IFTTTunesPrefs : NSPreferencePane
+@interface IFTTTunesPrefs : NSPreferencePane {
+    IBOutlet NSTextField *secretKey;
+    IBOutlet NSButton *visitIFTTT;
+}
 
-- (void)mainViewDidLoad;
+- (void) mainViewDidLoad;
+- (void) saveChanges:(NSNotification*) aNotification;
+- (IBAction) goToIFTTT:(id) sender;
 
 @end
+
