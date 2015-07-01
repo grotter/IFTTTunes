@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E840085C1B444681003771A4 /* IFTTTunesPrefs.h in Headers */ = {isa = PBXBuildFile; fileRef = E840085B1B444681003771A4 /* IFTTTunesPrefs.h */; };
 		E840085E1B444681003771A4 /* IFTTTunesPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = E840085D1B444681003771A4 /* IFTTTunesPrefs.m */; };
-		E84008601B444681003771A4 /* IFTTTunesPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = E840085F1B444681003771A4 /* IFTTTunesPrefs.tiff */; };
 		E84008631B444681003771A4 /* IFTTTunesPrefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84008611B444681003771A4 /* IFTTTunesPrefs.xib */; };
 		E840086A1B444E20003771A4 /* ifttt.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E84008691B444E20003771A4 /* ifttt.pdf */; };
 		E840086C1B445110003771A4 /* icon_64.png in Resources */ = {isa = PBXBuildFile; fileRef = E840086B1B445110003771A4 /* icon_64.png */; };
@@ -20,7 +19,6 @@
 		E840085A1B444681003771A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E840085B1B444681003771A4 /* IFTTTunesPrefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFTTTunesPrefs.h; sourceTree = "<group>"; };
 		E840085D1B444681003771A4 /* IFTTTunesPrefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFTTTunesPrefs.m; sourceTree = "<group>"; };
-		E840085F1B444681003771A4 /* IFTTTunesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IFTTTunesPrefs.tiff; sourceTree = "<group>"; };
 		E84008621B444681003771A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/IFTTTunesPrefs.xib; sourceTree = "<group>"; };
 		E84008691B444E20003771A4 /* ifttt.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ifttt.pdf; sourceTree = "<group>"; };
 		E840086B1B445110003771A4 /* icon_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_64.png; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 				E840085B1B444681003771A4 /* IFTTTunesPrefs.h */,
 				E840085D1B444681003771A4 /* IFTTTunesPrefs.m */,
 				E840086B1B445110003771A4 /* icon_64.png */,
-				E840085F1B444681003771A4 /* IFTTTunesPrefs.tiff */,
 				E84008611B444681003771A4 /* IFTTTunesPrefs.xib */,
 				E84008591B444681003771A4 /* Supporting Files */,
 			);
@@ -145,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E840086C1B445110003771A4 /* icon_64.png in Resources */,
-				E84008601B444681003771A4 /* IFTTTunesPrefs.tiff in Resources */,
 				E84008631B444681003771A4 /* IFTTTunesPrefs.xib in Resources */,
 				E840086A1B444E20003771A4 /* ifttt.pdf in Resources */,
 			);
@@ -294,6 +290,7 @@
 				E84008681B444681003771A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
