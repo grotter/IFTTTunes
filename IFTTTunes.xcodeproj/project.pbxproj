@@ -35,7 +35,6 @@
 		E8940BA01B41C9A700625FC1 /* IFTTTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IFTTTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8940BA51B41C9A700625FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8940BA61B41C9A700625FC1 /* IFTTTunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFTTTunesTests.m; sourceTree = "<group>"; };
-		E8940BB21B41CB2A00625FC1 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E8D9D5E81B41CFC5007AD266 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +77,6 @@
 		E8940B8F1B41C9A700625FC1 /* IFTTTunes */ = {
 			isa = PBXGroup;
 			children = (
-				E8940BB21B41CB2A00625FC1 /* Constants.h */,
 				E8940B921B41C9A700625FC1 /* AppDelegate.h */,
 				E8940B931B41C9A700625FC1 /* AppDelegate.m */,
 				E8940B971B41C9A700625FC1 /* Images.xcassets */,

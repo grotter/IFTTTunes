@@ -8,7 +8,6 @@
 
 #import "iTunes.h"
 #import "AppDelegate.h"
-#import "Constants.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +15,6 @@
 @end
 
 @implementation AppDelegate
-
-// @see
-// http://stackoverflow.com/questions/8088473/url-encode-a-nsstring
 
 - (NSString *) jsonString:(NSDictionary *) data {
     NSError *error;
@@ -35,9 +31,21 @@
 }
 
 - (void) sendRequest:(NSDictionary *) data {
+    // get secret key from system prefs
+    NSDictionary *prefs = [[NSUserDefaults standardUserDefaults]
+                           persistentDomainForName:[[NSBundle bundleForClass:[self class]]
+                                                  bundleIdentifier]];
+    
+    NSString *secretKey = [prefs objectForKey:@"secretKey"];
+    
+    if (!secretKey) return;
+    
+    // construct endpoint
     NSMutableString *urlString = [[NSMutableString alloc] init];
     [urlString appendString:@"https://maker.ifttt.com/trigger/itunes/with/key/"];
-    [urlString appendString:IFTTT_SECRET_KEY];
+    [urlString appendString:secretKey];
+    
+    NSLog(@"%@", urlString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest new];
     [request setHTTPMethod:@"POST"];
