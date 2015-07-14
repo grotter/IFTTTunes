@@ -45,8 +45,6 @@
     [urlString appendString:@"https://maker.ifttt.com/trigger/itunes/with/key/"];
     [urlString appendString:secretKey];
     
-    NSLog(@"%@", urlString);
-    
     NSMutableURLRequest *request = [NSMutableURLRequest new];
     [request setHTTPMethod:@"POST"];
     [request setURL:[NSURL URLWithString:urlString]];
@@ -55,14 +53,25 @@
     
     // track info
     NSString *track = [NSString stringWithFormat:@"%@ / \"%@\", %@ \(%@kbps)", [data objectForKey:@"artist"], [data objectForKey:@"name"], [data objectForKey:@"album"], [data objectForKey:@"bitRate"]];
-    [postString appendFormat:(@"&%@=%@"), @"value1", track];
+    [postString appendFormat:(@"&%@=%@"), @"value1", [self encodeURIComponent:track]];
     
     // json
     NSString *json = [self jsonString:data];
-    [postString appendFormat:(@"&%@=%@"), @"value2", json];
+    [postString appendFormat:(@"&%@=%@"), @"value2", [self encodeURIComponent:json]];
+    
+    NSLog(@"postString: %@", postString);
     
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
+- (NSString *) encodeURIComponent:(NSString *) input {
+    return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                               NULL,
+                                                               (CFStringRef)input,
+                                                               NULL,
+                                                               (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                               kCFStringEncodingUTF8);
 }
 
 - (void) onPause {
