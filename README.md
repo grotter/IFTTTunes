@@ -3,14 +3,11 @@
 
 ## Installation
 - Enable the [Maker Channel](https://ifttt.com/maker) if you haven't already
-- Place the preference pane and application files in their proper locations via
+- Install the application and preference pane via
 
 ```shell
-$ mv IFTTTunesPrefs.prefPane ~/Library/PreferencePanes
-$ mv IFTTTunes.app /Applications
+$ curl -fsSL https://raw.github.com/grotter/IFTTTunes/master/deploy/install.sh | sh
 ```
-
-- Set the app as a hidden startup item
 
 ## Usage
 Fill out your Maker Channel [secret key](https://ifttt.com/maker) in System Preferences. The app sends a pre-formatted string containing basic track information as **Value1** and the JSON-encoded equivalent as **Value2** to Maker Channel recipes with the *Event Name* trigger set as “itunes”.
