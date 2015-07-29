@@ -11,4 +11,7 @@ cp -R /tmp/IFTTTunes.app /Applications
 # set as hidden startup item
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/IFTTTunes.app", hidden:true}'
 
+# initial launch
+open -j /Applications/IFTTTunes.app
+
 echo "IFTTTunes installed! Set your Maker Channel secret key in System Preferences."
