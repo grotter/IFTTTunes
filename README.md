@@ -12,6 +12,8 @@ curl -fsSL https://raw.github.com/grotter/IFTTTunes/master/deploy/install.sh | s
 ## Usage
 Fill out your Maker Channel [secret key](https://ifttt.com/maker) in System Preferences. The app sends a pre-formatted string containing basic track information as **Value1** and the JSON-encoded equivalent as **Value2** to Maker Channel recipes with the *Event Name* trigger set as “itunes”.
 
+E.g., follow [@rotterworld](https://twitter.com/rotterworld) to keep tabs on my questionable taste-levels in music. The @rotterworld Twitterbot uses IFTTTunes and this [recipe](https://ifttt.com/recipes/312285).
+
 ## Tips
 This application has been tested with v11 and v12 of iTunes. You might need to dump the interface for your iTunes install to be used with [Scripting Bridge](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ScriptingBridgeConcepts/Introduction/Introduction.html) and recompile. Just replace iTunes.h with:
 
