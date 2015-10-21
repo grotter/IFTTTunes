@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <IFTTTunes-Swift.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     iTunesApplication *iTunes;
+    MenuButton *menuButton;
 }
 
 - (void) onPause;

@@ -14,6 +14,8 @@ Fill out your Maker Channel [secret key](https://ifttt.com/maker) in System Pref
 
 E.g., follow [@rotterworld](https://twitter.com/rotterworld) to keep tabs on my questionable taste-levels in music. The @rotterworld Twitterbot uses IFTTTunes and this [recipe](https://ifttt.com/recipes/312285).
 
+Set the application’s active state by toggling the little IFTTT button in the OS X menubar.
+
 ## Tips
 This application has been tested with v11 and v12 of iTunes. You might need to dump the interface for your iTunes install to be used with [Scripting Bridge](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ScriptingBridgeConcepts/Introduction/Introduction.html) and recompile. Just replace iTunes.h with:
 

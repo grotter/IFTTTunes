@@ -8,6 +8,7 @@
 
 #import "iTunes.h"
 #import "AppDelegate.h"
+#import "IFTTTunes-Swift.h"
 
 @interface AppDelegate ()
 
@@ -91,8 +92,8 @@
     // setup iTunes reference
     iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
     
-    // do nothing if pausing / not playing
-    if ([iTunes playerState] != iTunesEPlSPlaying) {
+    // do nothing if pausing / not playing / disabled
+    if ([iTunes playerState] != iTunesEPlSPlaying || !menuButton.sendToIFTTT) {
         [self onPause];
     } else {
         iTunesTrack *track = [iTunes currentTrack];
@@ -111,6 +112,9 @@
 }
 
 - (void) applicationDidFinishLaunching:(NSNotification *) aNotification {
+    // menu button
+    menuButton = [[MenuButton alloc] init];
+    
     // setup listener
     NSDistributedNotificationCenter *dnc = [NSDistributedNotificationCenter defaultCenter];
     [dnc addObserver:self selector:@selector(onEvent:) name:@"com.apple.iTunes.playerInfo" object:nil];
