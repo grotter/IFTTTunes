@@ -31,5 +31,3 @@ curl -fsSL https://raw.github.com/grotter/IFTTTunes/master/deploy/uninstall.sh |
 
 ## @todo
 - Add customizable track string format to preferences for **Value1**
-
-© 2015 [Greg Rotter](http://www.ocf.berkeley.edu/~grotter/). Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
