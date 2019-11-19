@@ -17,10 +17,13 @@ E.g., follow [@rotterworld](https://twitter.com/rotterworld) to keep tabs on my 
 Set the application’s active state by toggling the little IFTTT button in the OS X menubar.
 
 ## Tips
-This application has been tested with v11 and v12 of iTunes. You might need to dump the interface for your iTunes install to be used with [Scripting Bridge](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ScriptingBridgeConcepts/Introduction/Introduction.html) and recompile. Just replace iTunes.h with:
+This application has been tested with iTunes v11 and v12 and Music v1. You might need to dump the interface for your Music install to be used with [Scripting Bridge](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ScriptingBridgeConcepts/Introduction/Introduction.html) and recompile. Just replace Music.h with:
 
 ```shell
-xcrun sdef /Applications/iTunes.app | xcrun sdp -fh --basename iTunes 
+# legacy
+# xcrun sdef /Applications/iTunes.app | xcrun sdp -fh --basename iTunes
+
+xcrun sdef /System/Applications/Music.app | xcrun sdp -fh --basename Music
 ```
 
 ## Uninstall

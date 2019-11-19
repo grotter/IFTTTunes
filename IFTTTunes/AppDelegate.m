@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Greg Rotter. All rights reserved.
 //
 
-#import "iTunes.h"
+#import "Music.h"
 #import "AppDelegate.h"
 #import "IFTTTunes-Swift.h"
 
@@ -89,14 +89,14 @@
 }
 
 - (void) onEvent:(NSNotification *) notification {
-    // setup iTunes reference
-    iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    // setup Music reference
+    Music = [SBApplication applicationWithBundleIdentifier:@"com.apple.Music"];
     
     // do nothing if pausing / not playing / disabled
-    if ([iTunes playerState] != iTunesEPlSPlaying || !menuButton.sendToIFTTT) {
+    if ([Music playerState] != MusicEPlSPlaying || !menuButton.sendToIFTTT) {
         [self onPause];
     } else {
-        iTunesTrack *track = [iTunes currentTrack];
+        MusicTrack *track = [Music currentTrack];
         
         NSString *bitRate = [[NSNumber numberWithInt:[track bitRate]] stringValue];
         
@@ -117,7 +117,7 @@
     
     // setup listener
     NSDistributedNotificationCenter *dnc = [NSDistributedNotificationCenter defaultCenter];
-    [dnc addObserver:self selector:@selector(onEvent:) name:@"com.apple.iTunes.playerInfo" object:nil];
+    [dnc addObserver:self selector:@selector(onEvent:) name:@"com.apple.Music.playerInfo" object:nil];
     
     // auto-invoke listener on launch
     [self onEvent:nil];

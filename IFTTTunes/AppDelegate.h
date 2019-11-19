@@ -10,7 +10,7 @@
 #import <IFTTTunes-Swift.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
-    iTunesApplication *iTunes;
+    MusicApplication *Music;
     MenuButton *menuButton;
 }
 

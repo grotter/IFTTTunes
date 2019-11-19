@@ -9,8 +9,8 @@
 import Cocoa
 
 class MenuButton: NSObject, NSApplicationDelegate {
-    var sendToIFTTT = true
-    fileprivate let _statusItem = NSStatusBar.system().statusItem(withLength: -1)
+    @objc var sendToIFTTT = true
+    fileprivate let _statusItem = NSStatusBar.system.statusItem(withLength: -1)
     
     override init() {
         super.init()
@@ -22,7 +22,7 @@ class MenuButton: NSObject, NSApplicationDelegate {
         btn.action = #selector(MenuButton.onClick)
     }
     
-    func onClick() {
+    @objc func onClick() {
         sendToIFTTT = !sendToIFTTT
         
         let str = sendToIFTTT ? "color" : "bw"
